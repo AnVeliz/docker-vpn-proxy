@@ -1,0 +1,15 @@
+version: "3"
+services:
+  proxy:
+    image: ovpn-connector
+    ports:
+      - "3128:3128"
+    volumes:
+      - ./squid.conf:/root/squid.conf
+      - ./credentials.txt:/root/credentials.txt
+      - ./vpnfile.ovpn:/root/vpnfile.ovpn
+    dns:
+      - 10.10.0.5 # Manual DNS server if necessary.
+      - 8.8.8.8 # Fallback DNS server.
+    restart: always
+    privileged: true
