@@ -1,8 +1,8 @@
-# Dockerizzzed OpenVPN connector
+# Dockerizzzed OpenVPN connector with Squid proxy
 
 The connector is implemented as a docker-compose configuration. You may need to alter default DNS settings.
 
-Configuration options:
+Configuration options of the proxy server (change dir to `./proxy-srv` folder):
 
 |File|Parameter|Description|
 |----|---------|-----------|
@@ -18,3 +18,7 @@ To build the container run `"docker build -t ovpn-connector . "`. You may need t
 To run it with your configuration just make the adjacent you need in the configuration files and then run `docker-compose up`.
 
 Please make note that the container should run in a privileged mode.
+
+# Chrome extension to user the local proxy
+
+You need to enable `developer` mode on Chrome extensions tab to install extensions from a local folder. Than select `Load unpacked` and select `chrome-proxy` folder. The extension should appear in Chrome toolbar.

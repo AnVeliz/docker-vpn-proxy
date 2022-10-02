@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "LocalProxy",
+    "description": "Local proxy connector",
+    "version": "1.0",
+    "permissions": [
+        "proxy"
+    ],
+    "action": {
+        "default_icon": "images/server_off.png",
+        "default_title": "LocalProxy Connector"
+    },
+    "background": {
+        "service_worker": "js/background.js",
+        "type": "module"
+    }
+}
